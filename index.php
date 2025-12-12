@@ -45,6 +45,7 @@ if ($result->num_rows > 0) {
     <?php if (isset($_SESSION["auth"]) && $_SESSION["auth"] == true) { ?>
       <p>Zalogowano jako: <?= $_SESSION["email"] ?> </p>
       <a href="/logout">Wyloguj</a>
+      <a href="/create">Udostępnij posta</a>
     <?php } else { ?>
       <a href="/login">Zaloguj</a>
     <?php } ?>
