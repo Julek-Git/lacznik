@@ -53,10 +53,13 @@ if (isset($_POST["code"])) {
 </head>
 <body>
 <div id="app">
-  <div id="status"><?= $codeErr ?></div>
-  <form method="post" action="<?= $_SERVER["SCRIPT_NAME"] ?>">
-    <label for="code">Kod</label>
-    <input type="number" id="code" name="code" min="100000" max="999999">
+  <div class="tlo"></div>
+  <form style="left: 42.5%" method="post" action="<?= $_SERVER["SCRIPT_NAME"] ?>">
+    <div>
+      <div id="status"><?= $codeErr ?></div>
+      <label for="code">Kod: </label>
+      <input type="number" id="code" name="code" min="100000" max="999999" placeholder="Wpisz kod...">
+    </div>
     <button type="submit">Wyślij</button>
   </form>
 </div>

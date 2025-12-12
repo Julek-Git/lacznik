@@ -22,9 +22,9 @@ if (isset($_POST["email"])) {
   $domain = substr(strrchr($email, "@"), 1);
 
   if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $emailErr = "Zły format maila";
+    $emailErr = "Zły format maila.";
   } elseif (strcasecmp($domain, "uczen.tl.krakow.pl") !== 0) {
-    $emailErr = "Nie jesteś uczniem Łączności";
+    $emailErr = "Nie jesteś uczniem Łączności!";
   }
 
   if ($email != "" && $emailErr == "") {
@@ -50,12 +50,15 @@ if (isset($_POST["email"])) {
   <link rel="stylesheet" href="/styles/login.css">
 </head>
 <body>
+  <div class="tlo"></div>
   <div id="app">
-    <div id="status"><?= $emailErr ?></div>
     <form method="post" action="<?= $_SERVER["SCRIPT_NAME"] ?>">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email">
-      <button type="submit">Wyślij</button>
+      <div>
+        <div id="status"><?= $emailErr ?></div>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" placeholder="Wpisz swój email...">
+      </div>
+        <button type="submit">Wyślij</button>
     </form>
   </div>
 </body>
