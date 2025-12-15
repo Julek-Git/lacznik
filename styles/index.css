@@ -1,0 +1,97 @@
+body{
+    height: 100%;
+    background-color: #f0f9f6;
+    margin: 0px;
+}
+h2{
+    display: flex;
+    user-select: none;
+}
+h3{
+    margin-bottom: 30px;
+}
+img{
+    user-select: none;
+}
+.postlist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.post{
+    text-align: center;
+    border: 1px dashed #a2cabc;
+    margin-bottom: 10px;
+    width: 20%;
+    height: 40%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(209, 255, 238);
+}
+.username{
+    text-align: left;
+    border-bottom: 1px dashed black;
+    padding: 10px;
+    margin-top: -10px;
+}
+.header{
+    display: flex;
+    border-bottom: 1px dashed black;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+.guziki{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 27.3%;
+    user-select: none;
+}
+
+
+#wyl{
+    padding: 10px;
+    background-color: rgb(250, 187, 187);
+    color: red;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#post{
+    padding: 10px;
+    background-color: lightblue;
+    color: blue;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#zal{
+    padding: 10px;
+    background-color: lightgreen;
+    color: green;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10em;
+}
+
+#wyl:hover{
+    padding: 10px;
+    background-color: rgb(253, 156, 156);
+    color: rgb(180, 0, 0);
+    text-decoration: none;
+}
+#post:hover{
+    padding: 10px;
+    background-color: lightskyblue;
+    color: darkblue;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#zal:hover{
+    padding: 10px;
+    background-color: rgb(77, 213, 77);
+    color: rgb(16, 87, 16);
+    text-decoration: none;
+}
