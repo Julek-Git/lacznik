@@ -42,7 +42,7 @@ if ($result->num_rows > 0) {
 <body>
   <div id="app">
     <div class="header">
-      <img src="./styles/obrazy/zsł1.jpg" alt="logo ZSŁ" style="width: 150px">
+      <img src="/images/zsl1.jpg" alt="logo ZSŁ" style="width: 150px">
       <div class="guziki">
         <?php if (isset($_SESSION["auth"]) && $_SESSION["auth"] == true) { ?>
           <h3><span style="font-weight:normal;">Zalogowano jako: </span><i><u> <?= $_SESSION["email"] ?> </u></i></h3>
@@ -58,7 +58,7 @@ if ($result->num_rows > 0) {
     <div class="postlist">
       <?php foreach ($posts as $post) { ?>
         <div class="post">
-          <h2 class="username"><img src="./styles/obrazy/profilowe.png" alt="zdj_prof" style="width:35px; height:35px; margin-right: 10px"><span style="align-self: center">@ <?= $post["CREATOR"] ?></span></h2>
+          <h2 class="username"><img src="/images/profilowe.png" alt="zdj_prof" style="width:35px; height:35px; margin-right: 10px"><span style="align-self: center">@ <?= $post["CREATOR"] ?></span></h2>
           <p class="content"><?= $post["CONTENT"] ?></p>
         </div>
       <?php } ?>

@@ -9,7 +9,7 @@ body{
     font-style: italic;
 }
 .tlo{
-    background-image: url(tlo.jpg);
+    background-image: url(/images/tlo.jpg);
     width: 102%;
     height: 103vh;
     background-size: cover;
