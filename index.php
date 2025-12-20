@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="/styles/global.css">
-  <link rel="stylesheet" href="/styles/index.css">
+  <link rel="stylesheet" href="/styles/index.css?v=<?php echo time(); ?>">
 </head>
 <body>
   <div id="app">
@@ -46,7 +46,7 @@ if ($result->num_rows > 0) {
       <div class="guziki">
         <?php if (isset($_SESSION["auth"]) && $_SESSION["auth"] == true) { ?>
           <h3><span style="font-weight:normal;">Zalogowano jako: </span><i><u> <?= $_SESSION["email"] ?> </u></i></h3>
-          <div>
+          <div id="guziki">
             <a href="/create" id="post">Udostępnij posta</a>
             <a href="/logout" id="wyl">Wyloguj</a>
             <?php } else { ?>
@@ -63,6 +63,7 @@ if ($result->num_rows > 0) {
         </div>
       <?php } ?>
     </div>
+    <footer><h3 id="stopa">"Łączność to przyszłość!!"</h3></footer>
   </div>
 </body>
 </html>

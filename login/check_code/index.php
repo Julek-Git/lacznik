@@ -49,12 +49,12 @@ if (isset($_POST["code"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="/styles/global.css">
-  <link rel="stylesheet" href="/styles/login.css">
+  <link rel="stylesheet" href="/styles/login.css?v=<?php echo time(); ?>">
 </head>
 <body>
 <div id="app">
   <div class="tlo"></div>
-  <form style="left: 42.5%" method="post" action="<?= $_SERVER["SCRIPT_NAME"] ?>">
+  <form id="kod" method="post" action="<?= $_SERVER["SCRIPT_NAME"] ?>">
     <div>
       <div id="status"><?= $codeErr ?></div>
       <label for="code">Kod: </label>

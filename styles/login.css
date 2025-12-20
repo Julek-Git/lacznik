@@ -14,20 +14,18 @@ body{
     height: 103vh;
     background-size: cover;
     filter: blur(13px);
-    top: -2px;
-    left: -2px;
+    top: -12px;
+    left: -17px;
     position: absolute;
-    top: -10px;
-    left: -15px;
 }
 form{
     position: absolute;
-    top: 40%;
-    left: 39%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    top: 40%;
+    left: 41%;
     background-color: white;
     padding: 50px;
     border: 2px solid black;
@@ -67,4 +65,25 @@ input[type="number"]{
 }
 :-ms-input-placeholder {  
    font-style: italic; 
+}
+
+@media screen and (max-width: 400px){
+    .tlo{
+        width: 400px;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-size: 400px 651.2px;
+        scale: 1;
+    }
+    form{
+        left: 4.5%;
+        scale: 0.9;
+    }
+    input{
+        border: 1px solid black;
+    }
+    #kod{
+        margin-left: 15%;
+    }
 }

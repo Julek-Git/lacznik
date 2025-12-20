@@ -46,15 +46,17 @@ if (isset($_POST["content"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="/styles/global.css">
-  <link rel="stylesheet" href="/styles/createpost.css">
+  <link rel="stylesheet" href="/styles/createpost.css?v=<?php echo time(); ?>">
 </head>
 <body>
-<div id="app">
-  <div id="status"><?= $createError ?></div>
-  <form method="post">
-    <textarea id="content" name="content" maxlength="300" placeholder="Wpisz treść posta"></textarea>
-    <button type="submit">Opublikuj</button>
-  </form>
-</div>
+  <div class="tlo"></div>
+  <div id="app">
+    <div id="status"><?= $createError ?></div>
+    <form method="post">
+      <p>Podziel się swoimi przemyśleniami z innymi użytkownikami Łącznika i opublikuj swojego posta!</p>
+      <textarea id="content" name="content" maxlength="300" placeholder="Wpisz treść posta"></textarea>
+      <button type="submit">Opublikuj</button>
+    </form>
+  </div>
 </body>
 </html>

@@ -1,0 +1,66 @@
+body{
+    margin: 0px;
+    overflow: hidden;
+}
+p{
+    user-select: none;
+}
+form{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 40%;
+    left: 28%;
+    background-color: white;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+textarea{
+    width: 200px;
+    height: 40px;
+}
+button{
+    margin-top: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.tlo{
+    background-image: url(/images/tlo.jpg);
+    width: 102%;
+    height: 103vh;
+    background-size: cover;
+    filter: blur(13px);
+    top: -12px;
+    left: -17px;
+    position: absolute;
+}
+button:hover{
+    background-color: #d5d4d4;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 400px){
+    .tlo{
+        width: 400px;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-size: 400px 651.2px;
+        scale: 1;
+    }
+    form{
+        top: 35%;
+        left: 1%;
+        scale: 0.9;
+    }
+    textarea{
+        border: 1px solid black;
+    }
+    p{
+        text-align: center;
+    }
+}
