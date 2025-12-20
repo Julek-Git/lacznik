@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 
 $posts = [];
 
-$sql = "select PST_TEXT as CONTENT, PST_CREATOR_MAIL as CREATOR from POSTS";
+$sql = "select PST_TEXT as CONTENT, PST_CREATOR_MAIL as CREATOR from POSTS order by PST_ID desc";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
