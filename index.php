@@ -21,8 +21,8 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     $post = [];
-    $post["CREATOR"] = substr($row["CREATOR"], 0, strpos($row["CREATOR"], "@"));
-    $post["CONTENT"] = $row["CONTENT"];
+    $post["CREATOR"] = htmlspecialchars(substr($row["CREATOR"], 0, strpos($row["CREATOR"], "@")));
+    $post["CONTENT"] = htmlspecialchars($row["CONTENT"]);
     array_push($posts, $post);
   }
 }
