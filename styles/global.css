@@ -1,0 +1,135 @@
+#app {
+    height: 100vh;
+}
+
+.header{
+    display: flex;
+    border-bottom: 1px dashed black;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.guziki{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 31.5%;
+    user-select: none;
+}
+
+#wyl{
+    padding: 10px;
+    background-color: rgb(250, 187, 187);
+    color: red;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#post{
+    padding: 10px;
+    background-color: lightblue;
+    color: blue;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#zal{
+    padding: 10px;
+    background-color: lightgreen;
+    color: green;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 5em;
+}
+
+#wyl:hover{
+    padding: 10px;
+    background-color: rgb(253, 156, 156);
+    color: rgb(180, 0, 0);
+    text-decoration: none;
+}
+#post:hover{
+    padding: 10px;
+    background-color: lightskyblue;
+    color: darkblue;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#zal:hover{
+    padding: 10px;
+    background-color: rgb(77, 213, 77);
+    color: rgb(16, 87, 16);
+    text-decoration: none;
+}
+
+h3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    background-color: #d2ece3;
+    margin: 0px;
+    border-top: 1px solid #a2cabc;
+    border-bottom: 1px solid #a2cabc;
+    font-style: italic;
+}
+
+#stopa{
+    margin: 0px 0px;
+}
+
+@media screen and (max-width:710px){
+    .post{
+        width: 400px;
+    }
+    .guziki{
+        width: 0px;
+    }
+    #guziki{
+        display: flex;
+        align-self: center;
+        align-items: center;
+    }
+    #post{
+        width: 108px;
+        margin-right: 10px;
+    }
+    h3{
+        margin-bottom: 20px;
+    }
+
+    .header h3 {
+      font-size: 10pt;
+    }
+}
+
+@media screen and (max-width: 400px){
+    h3{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .guziki{
+        margin-left: 120px;
+    }
+    .post{
+        width: 60%;
+    }
+    #zal{
+        margin-left: 90px;
+    }
+    #stopa{
+        font-size: 17px;
+    }
+    #zal{
+        margin-left: 1em;
+    }
+}

@@ -1,35 +1,31 @@
 body{
     margin: 0px;
     overflow: hidden;
+    background-color: #f0f9f6;
 }
+
 #status{
     text-align: center;
     margin-bottom: 10px;
     color: red;
     font-style: italic;
 }
-.tlo{
-    background-image: url(/images/tlo.jpg);
-    width: 102%;
-    height: 103vh;
-    background-size: cover;
-    filter: blur(13px);
-    top: -12px;
-    left: -17px;
-    position: absolute;
+
+main {
+    display: flex;
+    justify-content: center;
 }
+
 form{
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    top: 40%;
-    left: 41%;
     background-color: white;
     padding: 50px;
     border: 2px solid black;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 button{
     margin-top: 10px;
@@ -37,19 +33,24 @@ button{
     border-radius: 5px;
     padding: 5px 10px;
 }
+
 button:hover{
     background-color: #d5d4d4;
     cursor: pointer;
 }
+
 input[type="email"]{
     width: 210px;
 }
+
 input[type="email"]:hover{
     border: 2px solid black;
 }
+
 input[type="number"]:hover{
     border: 2px solid black;
 }
+
 input[type="number"]{
     width: 100px;
 }
@@ -68,22 +69,7 @@ input[type="number"]{
 }
 
 @media screen and (max-width: 400px){
-    .tlo{
-        width: 400px;
-        height: 100%;
-        top: 0px;
-        left: 0px;
-        background-size: 400px 651.2px;
-        scale: 1;
-    }
-    form{
-        left: 4.5%;
-        scale: 0.9;
-    }
     input{
         border: 1px solid black;
-    }
-    #kod{
-        margin-left: 15%;
     }
 }

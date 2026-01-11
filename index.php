@@ -36,13 +36,13 @@ if ($result->num_rows > 0) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="/styles/global.css">
+  <link rel="stylesheet" href="/styles/global.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="/styles/index.css?v=<?php echo time(); ?>">
 </head>
 <body>
   <div id="app">
     <div class="header">
-      <img src="/images/zsl1.jpg" alt="logo ZSŁ" style="width: 150px">
+      <a href="/"><img src="/images/logo_<?= rand(0, 1) ? "lancuch" : "nieskonczonosc" ?>.svg" alt="logo ZSŁ" style="width: 120px; height: 120px; margin: 10px;"></a>
       <div class="guziki">
         <?php if (isset($_SESSION["auth"]) && $_SESSION["auth"] == true) { ?>
           <h3><span style="font-weight:normal;">Zalogowano jako: </span><i><u> <?= $_SESSION["email"] ?> </u></i></h3>
@@ -50,7 +50,7 @@ if ($result->num_rows > 0) {
             <a href="/create" id="post">Udostępnij posta</a>
             <a href="/logout" id="wyl">Wyloguj</a>
             <?php } else { ?>
-              <a href="/login" id="zal">Zaloguj</a>
+              <div id="guziki"><a href="/login" id="zal">Zaloguj</a>
               <?php } ?>
           </div>
       </div>
